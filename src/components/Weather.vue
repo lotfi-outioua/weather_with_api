@@ -39,7 +39,6 @@ export default {
 				axios
 				.get(`${this.url}q=${this.request}&units=metric&appid=${this.api_key}`)
 				.then(response => {
-					console.log(response);
 					this.weather = response.data;
 				})
 				this.request = ''
@@ -48,9 +47,6 @@ export default {
 	},
 	mounted () {
 		this.focus();
-		console.log('ccc');
-		console.log(`${process.env.VUE_APP_API_KEY}`);
-		console.log('ccc');
 	}
 }
 
